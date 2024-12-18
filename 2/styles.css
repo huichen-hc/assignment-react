@@ -50,6 +50,8 @@ nav ul {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -124,7 +126,7 @@ table {
   }
 }
 
-thead th{
+thead th {
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 1) 0%,
@@ -146,4 +148,54 @@ footer {
     text-align: center;
     color: var(--secondary-text-color);
   }
+}
+
+@media (max-width: 425px) {
+    body{
+        padding: 0 1.5rem;
+    }
+
+    .animated-text {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.1rem;
+    }
+
+    section h3 {
+        font-size: 1rem;
+    }
+
+    section ol, ul, table caption {
+        font-size: 0.9rem;
+    }
+
+    section p, form, table, table tr {
+        font-size: 0.8rem;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem; 
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    footer{
+        font-size: 0.8rem; 
+    }
+}
+
+@media (min-width: 600px) {
+    body{
+        padding: 0 2rem;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
 }
