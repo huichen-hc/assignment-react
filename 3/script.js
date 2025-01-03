@@ -57,6 +57,7 @@ textArea.style.width = "100%";
 textArea.style.border = "1px solid #ccc";
 textArea.style.borderRadius = "5px";
 
+//Style submit button
 const submitBtn = document.getElementById("submit-btn");
 submitBtn.style.width = "100%";
 submitBtn.style.marginBottom = "20px";
