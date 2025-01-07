@@ -5,10 +5,6 @@ buttonContainer.addEventListener("click", (event) => {
   alert("Container clicked!");
 });
 
-buttonChildContainer.addEventListener("click", (event) => {
-  alert("Child container clicked!");
-});
-
 //DOM Level 0 Event Handlers on Button 2
 const button2 = document.getElementById("button2");
 button2.onclick = function(){
@@ -21,7 +17,21 @@ button3.addEventListener("click",function(event){
   alert("Button3 is clicked!")
 });
 
-//Event Delegation on Button 4 and 5
+//Add event delegation on button 4 and 5 and prevent event propagation on button 4,5.
 buttonChildContainer.addEventListener("click",function(event){
+  if (event.target.tagName === "BUTTON"){
   alert(`${event.target.textContent} is clicked!`);
+  event.stopPropagation(); 
+  } else {
+    alert("Child container clicked!");
+  }
 });
+
+//Prevent event propagation on button 1,2,3.
+buttons = document.querySelectorAll("#button1","#button2","#button3");
+buttons.forEach((button) => {
+  button.addEventListener("click", function(event){
+    event.stopPropagation();
+})
+}); 
+
