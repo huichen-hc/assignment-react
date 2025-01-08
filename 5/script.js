@@ -1,6 +1,5 @@
 // Base URL
 const apiUrl = "https://api.example.com/data";
-//https://opentdb.com/api.php?amount=10&category=9
 
 // Function to make a GET request using
 // TODO: 1. find the error and fix it, 2. finish the function
@@ -25,7 +24,16 @@ fetchData(apiUrl);
 // Function to make a POST request
 // TODO: Implement the function
 function postData(url, data) {
-  
+  fetch(url,{
+    method: 'POST', 
+    headers: { 
+      'Content-Type': 'application/json' 
+    },
+    body: JSON.stringify(data) 
+  })
+    .then(response => response.json())  
+    .then(data => console.log(data))  
+    .catch(error => console.error('There was a problem with the fetch operation:', error));
 }
 
 const dataToPost = {
