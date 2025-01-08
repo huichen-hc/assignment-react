@@ -6,7 +6,7 @@ const apiUrl = "https://api.example.com/data";
 function fetchData(url) {
   fetch(url)
     .then((response) => {
-      if (response.ok) {
+      if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);
       }
       return response.json();
