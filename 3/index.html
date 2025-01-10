@@ -4,19 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Raleway"
+    rel="stylesheet"
+  />
   </head>
   <body>
+    <div id="form-container">
     <form action="/submit" method="post">
-      <label for="name">Label text should be something else:</label>
+      <h1>Contact us Form</h1>
+      
+      <div class="form-group">
+      <label for="name" id="nameLabel">Label text should be something else:</label>
       <input type="text" id="name" name="name" required /><br /><br />
+      </div>
 
-      <label for="email">Label text should be something else:</label>
+      <div class="form-group">
+      <label for="email" id="emailLabel">Label text should be something else:</label>
       <input type="email" id="email" name="email" required /><br /><br />
+      </div>
 
-      <label for="phone">Label text should be something else:</label>
+      <div class="form-group">
+      <label for="phone" id="phoneLabel">Label text should be something else:</label>
       <input type="tel" id="phone" name="phone" required /><br /><br />
+      </div>
 
-      <label for="message">Label text should be something else:</label><br />
+      <div class="form-group">
+      <label for="message" id="msgLabel">Label text should be something else:</label><br />
       <textarea
         id="message"
         name="message"
@@ -25,13 +39,16 @@
         required
       ></textarea
       ><br /><br />
-
-      <label for="options">Text should be something else:</label>
+      </div>
+     
+      <div class="form-group">
+      <label for="options" id="optionsLabel">Text should be something else:</label>
       <select id="options" name="options" required>
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option></select
       ><br /><br />
+      </div>
 
       <label>Choose one:</label><br />
       <input
@@ -47,8 +64,9 @@
       <input type="radio" id="radio3" name="radioGroup" value="radio3" />
       <label for="radio3">Radio 3</label><br /><br />
 
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" id="submit-btn"/>
     </form>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
