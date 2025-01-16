@@ -8,6 +8,7 @@
  *   reverseString("12345") should return "54321"
  */
 function reverseString() {}
+//Just to test if i really create a branch
 
 /**
  * TODO write a JavaScript function that takes a number and returns it in the reverse order.
