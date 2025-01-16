@@ -1,5 +1,6 @@
 /**
- * TODO write a JavaScript function that takes a string and returns it in revserse order.
+ * TODO 1
+ * write a JavaScript function that takes a string and returns it in revserse order.
  * DO NOT use the built-in reverse() method.
  * Should return the reversed string.
  * For example:
@@ -8,21 +9,22 @@
  *   reverseString("12345") should return "54321"
  */
 function reverseString(string) {
-  if (typeof string != 'string'){
+  if (typeof string != "string") {
     alert("Please enter a string!");
-  } else{
+  } else {
     let reversedStr = "";
-    for (let i = string.length-1; i >= 0; i--){
+    for (let i = string.length - 1; i >= 0; i--) {
       reversedStr = reversedStr.concat(string[i]);
     }
     return reversedStr;
-    }
   }
+}
 
-  console.log(reverseString("hello"));
-  
+console.log(reverseString("hello"));
+
 /**
- * TODO write a JavaScript function that takes a number and returns it in the reverse order.
+ * TODO 2
+ * write a JavaScript function that takes a number and returns it in the reverse order.
  * Should return the reversed number.
  * For example:
  *   reverseNumber(12345) should return 54321
@@ -31,24 +33,25 @@ function reverseString(string) {
  */
 
 function reverseNumber(number) {
-  if (typeof number != "number"){
+  if (typeof number != "number") {
     alert("Please enter a number!");
-  } else{
+  } else {
     let numAsString = String(number);
     let numAsStringArr = Array.from(numAsString);
     let reverseNumAsStrArr = [];
-    for (let i = numAsStringArr.length-1; i >=0; i--){
+    for (let i = numAsStringArr.length - 1; i >= 0; i--) {
       reverseNumAsStrArr.push(numAsStringArr[i]);
+    }
+    reverseNum = Number(reverseNumAsStrArr.join(""));
+    return reverseNum;
   }
-  reverseNum = Number(reverseNumAsStrArr.join(""));
-  return reverseNum
-}
 }
 
 console.log(reverseNumber(54321));
 
 /**
- * TODO destruct the following object to get name and age.
+ * TODO 3
+ * destruct the following object to get name and age.
  */
 const person = {
   name: "John",
@@ -59,17 +62,28 @@ const person = {
   },
 };
 
+const { name } = person;
+const {
+  info: { age },
+} = person;
+console.log(name);
+console.log(age);
+
 /**
- * TODO destruct the following array the first and second element, and the remaining elements in a third variable.
+ * TODO 4
+ * destruct the following array the first and second element, and the remaining elements in a third variable.
  */
 
 const thisArray = ["apple", "banana", "cherry", "dates", "elderberry", "fig"];
-
-
+const [first, second, ...rest] = thisArray;
+console.log(first);
+console.log(second);
+console.log(rest);
 
 /**
  * !!!!OPTIONAL!!!!
- * TODO Write a JavaScript function that checks if a string is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads * the same forward and backward. For example, "madam" is a palindrome.
+ * TODO 5
+ * Write a JavaScript function that checks if a string is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads * the same forward and backward. For example, "madam" is a palindrome.
  * The function should return true if the string is a palindrome and false if it is not.
  * For example:
  *    isPalindrome("madam") should return true
