@@ -1,6 +1,6 @@
 import React from "react";
 
-function ChildComponet({props}){
+function ChildComponent({props}){
     const hobbiesArr = props.info.hobbies;
 
     return(
@@ -13,4 +13,4 @@ function ChildComponet({props}){
     </div>)
 }
 
-export default ChildComponet;
+export default ChildComponent;
