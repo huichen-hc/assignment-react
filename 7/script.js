@@ -7,9 +7,20 @@
  *   reverseString("world") should return "dlrow"
  *   reverseString("12345") should return "54321"
  */
-function reverseString() {}
-//Just to test if i really create a branch
+function reverseString(string) {
+  if (typeof string != 'string'){
+    alert("Please enter a string!");
+  } else{
+    let reversedStr = "";
+    for (let i = string.length-1; i >= 0; i--){
+      reversedStr = reversedStr.concat(string[i]);
+    }
+    return reversedStr;
+    }
+  }
 
+  console.log(reverseString("hello"));
+  
 /**
  * TODO write a JavaScript function that takes a number and returns it in the reverse order.
  * Should return the reversed number.
@@ -19,7 +30,22 @@ function reverseString() {}
  *   reverseNumber(101010) should return 10101
  */
 
-function reverseNumber() {}
+function reverseNumber(number) {
+  if (typeof number != "number"){
+    alert("Please enter a number!");
+  } else{
+    let numAsString = String(number);
+    let numAsStringArr = Array.from(numAsString);
+    let reverseNumAsStrArr = [];
+    for (let i = numAsStringArr.length-1; i >=0; i--){
+      reverseNumAsStrArr.push(numAsStringArr[i]);
+  }
+  reverseNum = Number(reverseNumAsStrArr.join(""));
+  return reverseNum
+}
+}
+
+console.log(reverseNumber(54321));
 
 /**
  * TODO destruct the following object to get name and age.
@@ -38,6 +64,8 @@ const person = {
  */
 
 const thisArray = ["apple", "banana", "cherry", "dates", "elderberry", "fig"];
+
+
 
 /**
  * !!!!OPTIONAL!!!!
