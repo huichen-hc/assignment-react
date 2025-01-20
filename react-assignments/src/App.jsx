@@ -1,5 +1,5 @@
 import "./App.css";
-import ChildComponet from "./ChildComponet";
+import PropsComponent from "./Components/MyStateComponent/PropsComponent";
 
 function App() {
   const person = {
@@ -17,9 +17,8 @@ function App() {
       <header>
         <h1>This is React</h1>
       </header>
-      <ChildComponet props = {person} />
-      {
-      /* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
+      {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
+      <PropsComponent person={person} />
     </div>
   );
 }
